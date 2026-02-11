@@ -108,27 +108,24 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  min-height: 4rem;
+  min-height: 4.5rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--color-text);
+  padding: var(--space-xs);
+  margin: calc(-1 * var(--space-xs));
   text-decoration: none;
 }
 
 .logo:hover {
   text-decoration: none;
-  color: var(--color-accent);
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
 }
 
@@ -259,21 +256,22 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-size: clamp(1.85rem, 5vw, 2.6rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.22;
   margin: 0 0 var(--space-md);
-  max-width: var(--line-length);
+  max-width: 24ch;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: -0.02em;
 }
 
 .hero-subhead {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--color-text-muted);
-  max-width: 36ch;
+  max-width: 38ch;
   margin: 0 auto var(--space-xl);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .hero-actions {
@@ -281,29 +279,36 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
-.hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: var(--space-xl);
-  font-size: 0.95rem;
+.hero-trust-line {
+  font-size: 0.875rem;
   color: var(--color-text-muted);
+  margin: 0;
 }
 
-.hero-trust li {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+/* ========== Why it matters ========== */
+.why-it-matters {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-alt);
 }
 
-.trust-icon {
-  font-size: 1.1rem;
+.why-it-matters h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-md);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.why-body {
+  max-width: 42ch;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 /* ========== Problem / Solution ========== */
@@ -379,6 +384,12 @@ a:hover {
   gap: var(--space-lg);
 }
 
+.feature-grid-compact {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .feature-card {
   padding: var(--space-xl);
   background: var(--color-surface);
@@ -411,6 +422,13 @@ a:hover {
 .screenshots {
   padding: var(--space-4xl) 0;
   background: var(--color-bg-alt);
+}
+
+.screenshots-lead {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin: 0 auto var(--space-xl);
 }
 
 .screenshot-grid {
@@ -468,9 +486,15 @@ a:hover {
 }
 
 .screenshot-item figcaption {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-md);
   font-size: 0.9rem;
   color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.screenshot-label {
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 /* ========== Lightbox ========== */
@@ -626,8 +650,24 @@ a:hover {
 .pricing .price {
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 var(--space-lg);
+  margin: 0 0 var(--space-sm);
   color: var(--color-text);
+}
+
+.pricing-tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.pricing-pro-note {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-lg);
+  line-height: 1.5;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
 }
 
 .pricing-features {
@@ -721,7 +761,13 @@ a:hover {
 .cta-sub {
   font-size: 1.05rem;
   color: var(--color-text-muted);
-  margin: 0 0 var(--space-xl);
+  margin: 0 0 var(--space-lg);
+}
+
+.cta-note {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: var(--space-md) 0 0;
 }
 
 /* ========== Footer ========== */
@@ -773,7 +819,7 @@ a:hover {
 
   .main-nav {
     position: fixed;
-    top: 4rem;
+    top: 4.5rem;
     left: 0;
     right: 0;
     background: var(--color-surface);
@@ -816,11 +862,20 @@ a:hover {
   .screenshot-placeholder.visible {
     min-height: 200px;
   }
+
+  .logo-img {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 @media (max-width: 480px) {
   :root {
     --container-padding: 1rem;
+  }
+
+  .hero h1 {
+    max-width: none;
   }
 
   .hero-actions {
@@ -831,8 +886,13 @@ a:hover {
     width: 100%;
   }
 
-  .feature-grid {
+  .feature-grid-compact {
     grid-template-columns: 1fr;
+  }
+
+  .logo-img {
+    width: 44px;
+    height: 44px;
   }
 }
 
