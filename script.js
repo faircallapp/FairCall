@@ -82,7 +82,8 @@
       var target = document.getElementById(btn.getAttribute('aria-controls'));
       if (!target) return;
       btn.setAttribute('aria-expanded', !expanded);
-      target.hidden = expanded;
+      target.classList.toggle('is-open', !expanded);
+      target.setAttribute('aria-hidden', expanded);
     });
   });
 
