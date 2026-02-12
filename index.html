@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- ========== Header ========== -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a href="#" class="logo" aria-label="FairCall home">
-        <img src="assets/logo.png" alt="FairCall" width="52" height="52" class="logo-img">
+        <img src="assets/logo.png" alt="FairCall" width="56" height="56" class="logo-img">
       </a>
       <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
         <span class="nav-toggle-bar"></span>
@@ -20,10 +22,10 @@
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="#why-it-matters">Why</a></li>
+          <li><a href="#problem">Problem</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -33,170 +35,219 @@
   </header>
 
   <main>
+
+    <!-- ========== Hero — split layout ========== -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <h1 id="hero-heading">Fair classroom participation — without slowing your lesson.</h1>
-        <p class="hero-subhead">Offline-first random calling and one-tap participation logging that helps you include quieter students.</p>
-        <div class="hero-actions">
-          <a href="#get" class="btn btn-primary">Try FairCall</a>
-          <a href="#screenshots" class="btn btn-secondary">See how it works</a>
-        </div>
-        <p class="hero-trust-line">Works offline • No student data leaves your device • Built for real classrooms</p>
-      </div>
-    </section>
-
-    <section id="why-it-matters" class="why-it-matters" aria-labelledby="why-heading">
-      <div class="container">
-        <h2 id="why-heading">Why it matters</h2>
-        <p class="why-body">In most classes, a few voices dominate. Quiet students disappear — not intentionally, just by habit. FairCall makes participation visible, so you can balance it.</p>
-      </div>
-    </section>
-
-    <section class="problem-solution" aria-labelledby="problem-heading">
-      <div class="container">
-        <div class="ps-grid">
-          <div class="ps-column ps-problems">
-            <h2 id="problem-heading">Sound familiar?</h2>
-            <ul class="ps-list">
-              <li>
-                <strong>Dominant volunteers.</strong> Same hands every time.
-              </li>
-              <li>
-                <strong>Quiet students overlooked.</strong> Hard to notice who hasn’t spoken.
-              </li>
-              <li>
-                <strong>Hard to track fairly.</strong> No reliable record of who got called.
-              </li>
-            </ul>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-heading">Some students are never called on. That's a design problem.</h1>
+          <p class="hero-sub">FairCall picks students randomly, logs participation in one tap, and tracks fairness — all offline, all on your device.</p>
+          <div class="hero-actions">
+            <a href="#get" class="btn btn-primary btn-large">Try FairCall</a>
+            <a href="#how-it-works" class="btn btn-secondary btn-large">See how it works</a>
           </div>
-          <div class="ps-column ps-solutions">
-            <h2>FairCall helps.</h2>
-            <ul class="ps-list">
-              <li>
-                <strong>Equity mode.</strong> Weighted toward students called less.
-              </li>
-              <li>
-                <strong>Rounds + cooldown.</strong> Everyone gets a turn before repeats.
-              </li>
-              <li>
-                <strong>Fast logging + analytics.</strong> See participation spread at a glance.
-              </li>
-            </ul>
+          <p class="hero-proof">Built for real classrooms. No accounts. No cloud.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame">
+            <img src="assets/screen-2.jpeg" alt="FairCall live session — one-tap pick" width="280" height="560" loading="eager">
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="features" aria-labelledby="features-heading">
+    <!-- ========== Trust bar ========== -->
+    <div class="trust-bar" aria-label="Trust signals">
+      <div class="container trust-bar-inner">
+        <span class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1L3 5v4.5c0 4.2 3 8 7 9.5 4-1.5 7-5.3 7-9.5V5l-7-4z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Offline-first
+        </span>
+        <span class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4" y="8" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 8V6a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Data stays on device
+        </span>
+        <span class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Fast in-session logging
+        </span>
+      </div>
+    </div>
+
+    <!-- ========== Problem ========== -->
+    <section id="problem" class="problem-section" aria-labelledby="problem-heading">
       <div class="container">
-        <h2 id="features-heading">Benefits</h2>
-        <div class="feature-grid feature-grid-compact">
-          <article class="feature-card">
-            <h3>One-tap logging</h3>
-            <p>Engaged, Tried, No response, Skip — tap once per pick. No paperwork.</p>
+        <div class="section-header fade-up">
+          <h2 id="problem-heading">The classroom participation problem</h2>
+          <p class="section-lead">Teachers want fairness. But in the flow of a lesson, bias creeps in.</p>
+        </div>
+        <div class="problem-cards">
+          <article class="problem-card fade-up">
+            <div class="problem-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M7 24c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M18 6l2-2m0 0l2 2m-2-2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Same hands, every time</h3>
+            <p>A few confident voices dominate. The rest stop trying.</p>
           </article>
-          <article class="feature-card">
-            <h3>Fair picks with cooldown</h3>
-            <p>Random selection that avoids back-to-back repeats. Everyone gets a turn.</p>
+          <article class="problem-card fade-up">
+            <div class="problem-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M7 24c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M18 8l4 4m0-4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Quiet students disappear</h3>
+            <p>Not intentionally overlooked — just hard to notice in a busy class.</p>
           </article>
-          <article class="feature-card">
-            <h3>Volunteer tracking</h3>
-            <p>Hands raised still count. Log them alongside cold calls for the full picture.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Session insights</h3>
-            <p>Participation spread at a glance. See who’s missing before the bell.</p>
+          <article class="problem-card fade-up">
+            <div class="problem-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="5" y="4" width="18" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 10h8M10 14h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 18h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".4"/></svg>
+            </div>
+            <h3>No reliable record</h3>
+            <p>Without data, you can't see the pattern — or fix it.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="screenshots" class="screenshots" aria-labelledby="screenshots-heading">
+    <!-- ========== Features / Solution ========== -->
+    <section id="features" class="features-section" aria-labelledby="features-heading">
       <div class="container">
-        <h2 id="screenshots-heading">Screenshots</h2>
-        <p class="screenshots-lead">A live session takes seconds.</p>
+        <div class="section-header fade-up">
+          <h2 id="features-heading">How FairCall solves it</h2>
+        </div>
+
+        <div class="feature-row fade-up">
+          <div class="feature-text">
+            <h3>Random fair picks</h3>
+            <p>One tap to select a student. Cooldown prevents back-to-back repeats. Rounds ensure everyone gets a turn before anyone goes twice.</p>
+          </div>
+          <div class="feature-img">
+            <div class="phone-frame phone-frame-sm">
+              <img src="assets/screen-2.jpeg" alt="FairCall — one-tap random pick" loading="lazy" width="200" height="400">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row feature-row-reverse fade-up">
+          <div class="feature-text">
+            <h3>One-tap participation logging</h3>
+            <p>Engaged, Tried, No response, Skip. Tag each interaction instantly — no forms, no paperwork.</p>
+          </div>
+          <div class="feature-img">
+            <div class="phone-frame phone-frame-sm">
+              <img src="assets/screen-3.jpeg" alt="FairCall — participation tags" loading="lazy" width="200" height="400">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row fade-up">
+          <div class="feature-text">
+            <h3>Session insights + history</h3>
+            <p>See participation spread at a glance. Track trends over days or weeks. Export data when you need it.</p>
+          </div>
+          <div class="feature-img">
+            <div class="phone-frame phone-frame-sm">
+              <img src="assets/screen-4.jpeg" alt="FairCall — participation history" loading="lazy" width="200" height="400">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== How it works ========== -->
+    <section id="how-it-works" class="how-section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="how-heading">How it works</h2>
+          <p class="section-lead">Three steps. Under a minute to start.</p>
+        </div>
+        <div class="steps-row">
+          <article class="step-card fade-up">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Create a class</h3>
+            <p>Add students by name. Set pick mode and cooldown.</p>
+          </article>
+          <article class="step-card fade-up">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Start a session</h3>
+            <p>Tap Pick to choose randomly, or log volunteers as they come.</p>
+          </article>
+          <article class="step-card fade-up">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Track participation</h3>
+            <p>Review who spoke, who didn't, and how engagement changed over time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Screenshots ========== -->
+    <section id="screenshots" class="screenshots-section" aria-labelledby="screenshots-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="screenshots-heading">See it in action</h2>
+          <p class="section-lead">A live session takes seconds.</p>
+        </div>
         <div class="screenshot-grid">
-          <figure class="screenshot-item">
+          <figure class="screenshot-item fade-up">
             <a href="assets/screen-1.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Classes">
               <img src="assets/screen-1.jpeg" alt="FairCall classes" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
               <span class="screenshot-placeholder">screen-1.jpeg</span>
             </a>
-            <figcaption><span class="screenshot-label">Classes</span> — Your roster at a glance.</figcaption>
+            <figcaption><strong>Classes</strong> — Your roster at a glance.</figcaption>
           </figure>
-          <figure class="screenshot-item">
+          <figure class="screenshot-item fade-up">
             <a href="assets/screen-2.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Live session">
               <img src="assets/screen-2.jpeg" alt="FairCall live session" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
               <span class="screenshot-placeholder">screen-2.jpeg</span>
             </a>
-            <figcaption><span class="screenshot-label">Live session</span> — Pick, log, repeat.</figcaption>
+            <figcaption><strong>Live session</strong> — Pick, log, repeat.</figcaption>
           </figure>
-          <figure class="screenshot-item">
+          <figure class="screenshot-item fade-up">
             <a href="assets/screen-3.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Participation tags">
               <img src="assets/screen-3.jpeg" alt="FairCall participation tags" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
               <span class="screenshot-placeholder">screen-3.jpeg</span>
             </a>
-            <figcaption><span class="screenshot-label">Participation tags</span> — Quick context without paperwork.</figcaption>
+            <figcaption><strong>Tags</strong> — Quick context, no paperwork.</figcaption>
           </figure>
-          <figure class="screenshot-item">
+          <figure class="screenshot-item fade-up">
             <a href="assets/screen-4.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Participation history">
               <img src="assets/screen-4.jpeg" alt="FairCall participation history" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
               <span class="screenshot-placeholder">screen-4.jpeg</span>
             </a>
-            <figcaption><span class="screenshot-label">Session summary</span> — See who's missing at a glance.</figcaption>
+            <figcaption><strong>Summary</strong> — Who's missing at a glance.</figcaption>
           </figure>
-          <figure class="screenshot-item">
+          <figure class="screenshot-item fade-up">
             <a href="assets/screen-5.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Session settings">
               <img src="assets/screen-5.jpeg" alt="FairCall session settings" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
               <span class="screenshot-placeholder">screen-5.jpeg</span>
             </a>
-            <figcaption><span class="screenshot-label">Session settings</span> — Cooldown, rounds, pick mode.</figcaption>
+            <figcaption><strong>Settings</strong> — Mode, cooldown, rounds.</figcaption>
           </figure>
-          <figure class="screenshot-item">
-            <a href="assets/screen-6.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Start session">
-              <img src="assets/screen-6.jpeg" alt="FairCall start session" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
+          <figure class="screenshot-item fade-up">
+            <a href="assets/screen-6.jpeg" class="screenshot-link" data-lightbox="screenshots" data-caption="Class screen">
+              <img src="assets/screen-6.jpeg" alt="FairCall class screen" loading="lazy" width="280" height="560" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
               <span class="screenshot-placeholder">screen-6.jpeg</span>
             </a>
-            <figcaption><span class="screenshot-label">Start session</span> — Pick students and log scores.</figcaption>
+            <figcaption><strong>Class</strong> — Start session, manage students.</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot lightbox" hidden>
-      <button type="button" class="lightbox-close" aria-label="Close">×</button>
+      <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
       <img src="" alt="" class="lightbox-img">
       <p class="lightbox-caption"></p>
     </div>
 
-    <section id="how-it-works" class="how-it-works" aria-labelledby="how-heading">
+    <!-- ========== Pricing ========== -->
+    <section id="pricing" class="pricing-section" aria-labelledby="pricing-heading">
       <div class="container">
-        <h2 id="how-heading">How it works</h2>
-        <p class="section-lead">Three simple steps.</p>
-        <div class="steps">
-          <article class="step">
-            <span class="step-num" aria-hidden="true">1</span>
-            <h3>Start a session</h3>
-            <p>Open a class, choose your mode (uniform or equity), and go.</p>
-          </article>
-          <article class="step">
-            <span class="step-num" aria-hidden="true">2</span>
-            <h3>Pick or log volunteers</h3>
-            <p>Tap to pick randomly, or log hand-raises as they happen.</p>
-          </article>
-          <article class="step">
-            <span class="step-num" aria-hidden="true">3</span>
-            <h3>Track fairness over time</h3>
-            <p>Review participation spread, history, and insights after class.</p>
-          </article>
+        <div class="section-header fade-up">
+          <h2 id="pricing-heading">Pricing</h2>
+          <p class="section-lead">Start free. Upgrade when it matters.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing" aria-labelledby="pricing-heading">
-      <div class="container">
-        <h2 id="pricing-heading">Pricing</h2>
-        <p class="section-lead">Simple, honest pricing.</p>
-        <div class="pricing-grid">
+        <div class="pricing-grid fade-up">
           <article class="pricing-card">
             <h3>Free</h3>
             <p class="price">$0</p>
@@ -204,76 +255,92 @@
             <ul class="pricing-features">
               <li>Unlimited classes</li>
               <li>Cooldown to avoid repeats</li>
-              <li>History (today, 7 days)</li>
+              <li>History (today + 7 days)</li>
             </ul>
             <a href="#get" class="btn btn-secondary btn-block">Get started</a>
           </article>
           <article class="pricing-card pricing-card-pro">
             <span class="badge">Pro</span>
             <h3>Pro</h3>
-            <p class="price">TBD</p>
-            <p class="pricing-tagline">Equity mode + insights</p>
+            <p class="price">$3<span class="price-period">/mo</span></p>
+            <p class="pricing-tagline">Equity mode + deeper insights</p>
             <ul class="pricing-features">
-              <li>Weighted toward less-called students</li>
-              <li>Full history, CSV export</li>
+              <li>Weighted picks (favor less-called)</li>
+              <li>Full history + CSV export</li>
+              <li>Session-level analytics</li>
             </ul>
-            <p class="pricing-pro-note">Designed to reduce unintentional favoritism and broaden participation.</p>
-            <a href="#get" class="btn btn-primary btn-block">Try FairCall</a>
+            <p class="pricing-note">Designed to reduce unintentional favoritism and broaden participation.</p>
+            <a href="#get" class="btn btn-primary btn-block">Try FairCall Pro</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="faq" aria-labelledby="faq-heading">
+    <!-- ========== FAQ ========== -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-heading">
       <div class="container">
-        <h2 id="faq-heading">FAQ</h2>
-        <dl class="faq-list">
+        <div class="section-header fade-up">
+          <h2 id="faq-heading">FAQ</h2>
+        </div>
+        <dl class="faq-list fade-up">
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-1" id="faq-q1">Does it work offline?</button></dt>
-            <dd id="faq-1" class="faq-answer" aria-labelledby="faq-q1" aria-hidden="true"><span class="faq-answer-inner">Yes. FairCall is built offline-first. No Wi‑Fi needed in the classroom.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-1">Does it work offline?</button></dt>
+            <dd id="faq-1" class="faq-a" aria-hidden="true"><div class="faq-a-inner">Yes. FairCall is built offline-first. No Wi-Fi needed in the classroom.</div></dd>
           </div>
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-2" id="faq-q2">Does it store student data in the cloud?</button></dt>
-            <dd id="faq-2" class="faq-answer" aria-labelledby="faq-q2" aria-hidden="true"><span class="faq-answer-inner">No. Data stays on your device. We don’t sync participation to any server.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-2">Does it store student data in the cloud?</button></dt>
+            <dd id="faq-2" class="faq-a" aria-hidden="true"><div class="faq-a-inner">No. All data stays on your device. Nothing is synced to any server.</div></dd>
           </div>
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-3" id="faq-q3">What’s Equity mode?</button></dt>
-            <dd id="faq-3" class="faq-answer" aria-labelledby="faq-q3" aria-hidden="true"><span class="faq-answer-inner">Equity mode weights the random pick toward students who have been called less often. It balances participation over time.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-3">What's Equity mode?</button></dt>
+            <dd id="faq-3" class="faq-a" aria-hidden="true"><div class="faq-a-inner">Equity mode weights the random pick toward students called less often. It balances participation over time.</div></dd>
           </div>
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-4" id="faq-q4">Will it slow down teaching?</button></dt>
-            <dd id="faq-4" class="faq-answer" aria-labelledby="faq-q4" aria-hidden="true"><span class="faq-answer-inner">No. One-tap pick and fast logging keep the flow moving. It’s designed for in-session use.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-4">Will it slow down teaching?</button></dt>
+            <dd id="faq-4" class="faq-a" aria-hidden="true"><div class="faq-a-inner">No. One-tap pick and fast logging keep the flow moving. It's designed for in-session use.</div></dd>
           </div>
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-5" id="faq-q5">Can I export data?</button></dt>
-            <dd id="faq-5" class="faq-answer" aria-labelledby="faq-q5" aria-hidden="true"><span class="faq-answer-inner">Yes. Pro includes CSV export for participation records, grading, or reports.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-5">Can I export data?</button></dt>
+            <dd id="faq-5" class="faq-a" aria-hidden="true"><div class="faq-a-inner">Yes. Pro includes CSV export for participation records, grading, or reports.</div></dd>
           </div>
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-6" id="faq-q6">Android and iOS?</button></dt>
-            <dd id="faq-6" class="faq-answer" aria-labelledby="faq-q6" aria-hidden="true"><span class="faq-answer-inner">Android is the initial focus. iOS availability is TBD. Check back for updates.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-6">Android and iOS?</button></dt>
+            <dd id="faq-6" class="faq-a" aria-hidden="true"><div class="faq-a-inner">Android first. iOS availability is planned. Check back for updates.</div></dd>
           </div>
           <div class="faq-item">
-            <dt><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-7" id="faq-q7">How do I reset or edit students?</button></dt>
-            <dd id="faq-7" class="faq-answer" aria-labelledby="faq-q7" aria-hidden="true"><span class="faq-answer-inner">From the class roster, you can add, edit, or remove students. Session history stays intact unless you clear it.</span></dd>
+            <dt><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-7">How do I reset or edit students?</button></dt>
+            <dd id="faq-7" class="faq-a" aria-hidden="true"><div class="faq-a-inner">From the class roster you can add, edit, or remove students. Session history stays intact unless you clear it.</div></dd>
           </div>
         </dl>
       </div>
     </section>
 
-    <section id="get" class="cta" aria-labelledby="cta-heading">
-      <div class="container">
-        <h2 id="cta-heading">Get FairCall</h2>
-        <p class="cta-sub">Fair participation, without slowing your lesson.</p>
-        <a href="mailto:hello@yourdomain.com?subject=FairCall%20inquiry" class="btn btn-primary btn-large">Try FairCall</a>
+    <!-- ========== CTA — dark ========== -->
+    <section id="get" class="cta-section" aria-labelledby="cta-heading">
+      <div class="container fade-up">
+        <h2 id="cta-heading">Make every voice count.</h2>
+        <p class="cta-sub">Fair participation — without slowing your lesson.</p>
+        <a href="mailto:hello@yourdomain.com?subject=FairCall%20early%20access" class="btn btn-cta btn-large">Try FairCall</a>
         <p class="cta-note">Coming to Android soon. Contact us for early access.</p>
       </div>
     </section>
+
   </main>
 
+  <!-- ========== Footer ========== -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p class="copyright">© <span id="year">2025</span> FairCall. All rights reserved.</p>
-      <p class="contact">Contact: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="FairCall" width="32" height="32" class="footer-logo">
+        <p class="footer-tagline">Fair classroom participation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@yourdomain.com">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2026</span> FairCall. All rights reserved.</p>
     </div>
   </footer>
 
